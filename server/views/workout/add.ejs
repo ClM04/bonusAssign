@@ -1,0 +1,50 @@
+<!-- 
+    Celine Ma (100874382)
+    My Personal Portfolio Website
+    This is the Workout add page
+-->
+<%- include ../partial/main_nav.ejs %>
+
+
+<form class="form" method="POST">
+    <div class="form-group">
+        <label for="dayTextField">Day</label>
+        <input type="text" class="form-control"
+        id="dayTextField"
+        placeholder="ex. Monday"
+        name="Day" required>
+    </div>
+
+    <div class="form-group">
+        <label for="timeTextField">Time</label>
+        <input type="text" class="form-control"
+        id="timeTextField"
+        placeholder="ex. 1:23 pm"
+        name="Time" required>
+    </div>
+
+    <div class="form-group">
+        <label for="descriptionTextArea">Description</label>
+        <textarea type="text" class="form-control"
+        id="descriptionTextArea"
+        placeholder="Enter the Description (ex. running)"
+        name="Description" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="durationTextField">Duration</label>
+        <input type="text" class="form-control"
+        id="durationTextField"
+        placeholder="ex. 45 mins"
+        name="Duration" required>
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        <i class="fas fa-edit"></i> Submit</button>
+    
+        <a href="/workoutslist" class="btn btn-warning">
+            <i class="fas fa-undo"></i> Cancel</a>
+
+</form>
+
+<% include ../partial/footer.ejs %>

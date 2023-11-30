@@ -1,0 +1,60 @@
+<% include ../partial/main_nav.ejs %>
+<!-- Main Content-->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>  
+            <% if(typeof displayName=='string' && displayName) { %>
+            <a href="/workoutslist/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add Workout</a>      
+            <br>
+            <% } %>
+            <br>
+        <table class="table table-bordered table-striped table-hover">
+        <tr class="d-flex">
+        <% if(typeof displayName=='string' && displayName) { %>
+            <th class="text-center col-2">Day</th>
+            <th class="text-center col-2">Time</th>
+            <th class="text-center col-4">Description</th>
+            <th class="text-center col-2">Duration</th>
+        <% } else { %>
+            <th class="text-center col-2">Day</th>
+            <th class="text-center col-2">Time</th>
+            <th class="text-center col-4">Description</th>
+            <th class="text-center col-2">Duration</th>
+        <% } %>
+         </tr>
+
+        <!-- Repeat the template -->
+        <% for(let count=0;count<WorkoutList.length;count++) { %>    
+            <tr class="d-flex">
+            <% if(typeof displayName=='string' && displayName) { %>
+                <td class="text-center col-2"><%= WorkoutList[count].Day %></td>
+                <td class="text-center col-2"><%= WorkoutList[count].Time %></td>
+                <td class="text-center col-4"><%= WorkoutList[count].Description %></td>
+                <td class="text-center col-2"><%= WorkoutList[count].Duration %></td>
+                <td class="text-center col-1">
+                    <a href="/workoutslist/edit/<%= WorkoutList[count]._id %>" 
+                        class="btn btn-primary btn-sm">
+                        <i class="fas fa-pencil-alt"></i> Edit
+                    </a>
+                </td>
+                <td class="text-center col-1">
+                    <a href="/workoutslist/delete/<%= WorkoutList[count]._id %>" 
+                        class="btn btn-danger btn-sm">
+                        <i class="fas trash-alt"></i> Delete
+                    </a>
+                </td>
+            <% } else { %>
+                <td class="text-center col-2"><%= WorkoutList[count].Day %></td>
+                <td class="text-center col-2"><%= WorkoutList[count].Time %></td>
+                <td class="text-center col-4"><%= WorkoutList[count].Description %></td>
+                <td class="text-center col-2"><%= WorkoutList[count].Duration %></td>
+            <% } %>       
+            </tr>
+        <% } %>
+        </table>
+    </div>
+    </div>
+</main>
+<% include ../partial/footer.ejs %>

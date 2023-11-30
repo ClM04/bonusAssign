@@ -1,0 +1,74 @@
+<head>
+  <meta charset="UTF-8">
+  <!-- The following line links to our style sheets-->
+  <meta name="viewport" content="width=device-width">
+  <!-- full-size monitor style sheet-->
+  <link href="/Content/full.css" rel="stylesheet" type="text/css" media="only screen and
+  (min-width:1100px)">
+  <!-- tablet style sheet-->
+  <link href="/Content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+  and (min-width:481px) and (max-width:1099px)">
+  <!-- phone style sheet-->
+  <link href="/Content/phone.css" rel="stylesheet" type="text/css" media="only screen
+  and (max-width:480px)">
+  <title><%= title %></title>
+</head>
+
+
+<ul class="navbar-nav ms-auto">
+  <li class="nav-item">
+    <% if(title == "index") { %>
+      <a class="nav-link active" href="/index">
+    <% } else { %>
+      <a class="nav-link" href="/index">
+    <% } %>
+      <i class="fa-solid fa-lg fa-house-laptop"></i> Home</a>
+  </li>
+  <li class="nav-item">
+    <% if(title == "About Me") { %>
+      <a class="nav-link active" href="/aboutme">
+    <% } else { %>
+      <a class="nav-link" href="/aboutme">
+    <% } %>
+      <i class="fa-solid fa-address-card"></i> About Me</a>
+  </li>
+  <li class="nav-item">
+    <% if(title == "Projects") { %>
+      <a class="nav-link active" href="/projects">
+    <% } else { %> 
+        <a class="nav-link" href="/projects">
+    <% } %>
+      <i class="fa-solid fa-bars"></i> Projects</a>
+  </li>
+  <li class="nav-item">
+    <% if(title == "Workout List") { %>
+      <a class="nav-link active" href="/workoutslist">
+    <% } else { %> 
+      <a class="nav-link" href="/workoutslist">
+    <% } %>
+    <i class="fa-solid fa-workout"></i> Workout</a>
+  </li>
+  <li class="nav-item">
+    <% if(title == "Contact") { %>
+      <a class="nav-link active" href="/contact">
+    <% } else { %> 
+      <a class="nav-link" href="/contact">
+    <% } %>
+      <i class="fa-solid fa-phone-flip"></i> Contact</a>
+  </li>
+  <% if(typeof displayName == 'string' && displayName) { %>
+  <li class="navbar-text">
+    <i class="fas fa-lg fa-user"></i>
+    Welcome, <%= displayName %>
+  </li>
+  <li class="nav-item">
+      <a href="/logout" class="nav-link" >
+      <i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+  </li>
+  <% } else { %>
+    <li class="nav-item">
+      <a href="/login" class="nav-link">
+      <i class="fa-solid fa-sign-in-alt"></i> Login</a>
+  </li>
+  <% } %>
+</ul>

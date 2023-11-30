@@ -1,0 +1,51 @@
+<!-- 
+    Celine Ma (100874382)
+    My Personal Portfolio Website
+    This is the Home page
+-->
+
+
+<!--The HTML5 doctype declaration is very simple-->
+<!DOCTYPE HTML>
+<!--All page content is inside the HTML element-->
+<html>
+    <!--Head element content is not visible in a browser window-->
+    <head>
+        <!--The UTF-8 character set provides the most support for all symbols and
+        characters-->
+        <meta charset="UTF-8">
+        <!-- The following line links to our style sheets-->
+        <meta name="viewport" content="width=device-width">
+        <!-- full-size monitor style sheet-->
+        <link href="/Content/full.css" rel="stylesheet" type="text/css" media="only screen and
+        (min-width:1100px)">
+        <!-- tablet style sheet-->
+        <link href="/Content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+        and (min-width:481px) and (max-width:1099px)">
+        <!-- phone style sheet-->
+        <link href="/Content/phone.css" rel="stylesheet" type="text/css" media="only screen
+        and (max-width:480px)">
+        <title><%= title %></title>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+    </head>
+    <!--Content visible in the browser's window is inside the HTML element-->
+    <body>
+        <!-- My header from header.ejs file -->
+        <%- include("partial/header") %>
+        <br>
+        <!--my title of my website-->
+        <div class="title">
+            <h3>My Personal Portfolio Website</h3>
+            <h1 id="title1">I'm</h1>
+            <h1>Celine</h1>
+        </div>
+        <script src = "/Scripts/app.js"></script>
+        <!--The clear class style clears (removes) float-->
+        <div class="clear"></div>
+        <!--my footer from footer.ejs-->
+        <%- include("partial/footer") %>
+    </body>
+</html>

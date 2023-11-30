@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*
+    Celine Ma (100874382)
+    My Personal Portfolio Website
+    This is the CSS Document for my website
+    CSS for phone that have a viewport of maximum 480 pixels
+    
+    --> Comments are the same from full.css
+*/
+
+/* Maximum viewport is 480px */
+@media only screen
+and (max-width : 480px) {
+    /*------------------------------------------Home page-------------------------------------------*/
+    /* The body tag style applies to all elements on the page */
+    body {
+        background-image: linear-gradient(to top right, rgb(0, 255, 251), rgb(216, 228, 216), black);
+        background-attachment: fixed;
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        margin:auto;
+    }
+
+    .header h1{
+        margin-left: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 60px;
+        text-shadow: 2px 5px white;
+    }
+
+    /*-----------------------------------------*/
+
+    .title{
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 2px 5px white;
+        color: black;
+        line-height: 40px;
+        height: auto;
+    }
+
+    #title1{
+        margin-left: 10px;
+        font-size: 30px;
+        position: relative;
+        top: 10px;
+    }
+    
+    .title h1{
+        margin-left: 10px;
+        font-size: 80px;
+        position: relative;
+        top: 20px;
+        line-height: 0;
+    }
+
+    .title h3{
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        width: auto;
+        border: 2px solid black;
+        padding: 10px;
+        margin-top: 0px;
+        margin-right: 10px;
+        float: right;
+        font-size: 30px;
+    }
+
+    #banner {
+        height: auto;
+        text-align: right;
+        display: inline;
+    }
+
+    /* Defining a style for a set of tags separated by commas applies the style to
+    all tags */
+    #banner h4,span {
+        /* h4 */
+        color: black;
+        display: inline;
+        float: left;
+        /* Span */
+        padding: 4px;
+        border: 2px double black
+    } 
+
+    a:link, a:visited {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    a:hover {
+        color: rgb(0, 255, 251);
+    }
+
+    #footer {
+        margin-left: 10px;
+    }
+
+    .clear{
+        clear: both;
+    }
+
+    /*------------------------------------------About Me page-------------------------------------------*/
+    #aboutme-header{
+        font-size: 40px;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .p3{
+        color: black;
+        font-size: large;
+        text-align: center;
+        border-style: dotted;
+        width: 80%;
+        border-color:black;
+        margin: 0 auto; 
+        padding: 10px;
+        background-color: white;
+    }
+
+    .aboutme,.me,.video{
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .me {
+        background-color: pink;
+    }
+
+    .video{
+        background-color: black;
+    }
+
+    .circle,.avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto; 
+        outline: solid 1px black;
+
+    }
+
+    video {
+        width: 400px;
+        height: 200px;
+        padding: 15px;
+        margin: 0 auto; 
+        background-color:black;
+        border: 2px white solid;
+        box-shadow: 5px 5px 5px white;
+    }
+
+    /*------------------------------------------Projects page-------------------------------------------*/
+    #projects-header{
+        font-size: 40px;
+    }
+
+    .projects,.table{
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .projects table, th, td{
+        border: 2px black solid;
+    }
+
+    /*------------------------------------------Contact page-------------------------------------------*/
+    #contact-header{
+        font-size: 40px;
+    }
+
+    .contacts,.form{
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    #contact{
+        background-color: white;
+        width: 90%;
+        height: auto;
+        margin: 0 auto; 
+        padding: 15px;
+    }
+
+    .contact{
+        background: linear-gradient(220deg, rgba(159, 61, 61, 1), rgba(0,0,0,0) 70%), /* Angle linear-gradient */
+                    linear-gradient(130deg, rgba(21, 112, 109, 1), rgba(0,0,0,0) 70%),
+                    linear-gradient(340deg, rgba(42, 104, 28, 1), rgba(0,0,0,0) 70%);
+        background-attachment: fixed;
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        margin:auto;
+    }
+
+    .contact h1{
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 2px 5px black;
+        color: white;
+    }
+}
+/*------------------------------------------Partial Header/Footer-------------------------------------------*/
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.footer a {
+    font-size: medium;
+    color:black;
+    margin-left: 100px;
+}

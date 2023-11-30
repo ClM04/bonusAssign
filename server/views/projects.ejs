@@ -1,0 +1,63 @@
+<!-- 
+    Celine Ma (100874382)
+    My Personal Portfolio Website
+    This is the Projects page
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- The following line links to our style sheets-->
+        <meta name="viewport" content="width=device-width">
+        <!-- full-size monitor style sheet-->
+        <link href="/Content/full.css" rel="stylesheet" type="text/css" media="only screen and
+        (min-width:1100px)">
+        <!-- tablet style sheet-->
+        <link href="/Content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+        and (min-width:481px) and (max-width:1099px)">
+        <!-- phone style sheet-->
+        <link href="/Content/phone.css" rel="stylesheet" type="text/css" media="only screen
+        and (max-width:480px)">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <!-- My header from header.ejs file -->
+        <%- include("partial/header") %>
+        <!--Projects header section-->
+        <section class="projects">
+            <div class="header">
+                <h1 id="projects-header">Projects</h1>
+            </div>
+        </section>
+        <!--Table of projects i did section-->
+        <section class="table">
+            <div class="projects">
+                <table style="width:100%">
+                    <tr><!--First row, first column-->
+                        <th>Programming</th>
+                        <td><!--First row, second column-->
+                            <ul><!--unordered list-->
+                                1. HTML/CSS: <br>
+                                Assignment 1: Creating a Personal Portflio Website<br><br>
+                                2. Python:<br>
+                                Did a OOP project: using Playfair, RSA, Transposition, Product, Substitution, Caesar Ciphers
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr><!--Second row, first column-->
+                        <th>Math</th>
+                        <td><!--Second row, second column-->
+                            <ul>
+                                1. Probabilty:<br>
+                                Assignment 1: Finding the probabilty: using Permutation, combination, conditional
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!--my footer from footer.ejs-->
+        <%- include("partial/footer") %>
+    </body>
+</html>

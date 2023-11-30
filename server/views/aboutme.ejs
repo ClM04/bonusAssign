@@ -1,0 +1,65 @@
+<!-- 
+    Celine Ma (100874382)
+    My Personal Portfolio Website
+    This is the About Me page
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- The following line links to our style sheets-->
+        <meta name="viewport" content="width=device-width">
+        <!-- full-size monitor style sheet-->
+        <link href="/Content/full.css" rel="stylesheet" type="text/css" media="only screen and
+        (min-width:1100px)">
+        <!-- tablet style sheet-->
+        <link href="/Content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+        and (min-width:481px) and (max-width:1099px)">
+        <!-- phone style sheet-->
+        <link href="/Content/phone.css" rel="stylesheet" type="text/css" media="only screen
+        and (max-width:480px)">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <!-- My header from header.ejs file -->
+        <%- include("partial/header") %>
+        <!--About me header section-->
+        <section class="aboutme">
+            <div class="header">
+                <h1 id="aboutme-header">About Me</h1>
+            </div>
+        </section>
+        <!--Paragraph about who I am and what I look like section-->
+        <section class="me">
+            <h2>Who am I?</h2>
+            <!--My image-->
+            <div class="circle">
+                <img src="../Assets/images/myAvatar.png" alt="My avatar" class="avatar">
+            </div>
+            <!--Paragraph section-->
+            <p class="p3">
+            Hi, my name is Celine Ma, a second year student majoring in Networking and IT. 
+            I chose to pursue a degree in this program because I am very interested in it and I recognize the abundant job opportunities in this field. 
+            Networking plays a crucial role in our modern society, connecting people and businesses across the globe. <br>
+            
+            Furthermore, outside of school, I have a part-time job as a lifeguard and swimming instructor at my local leisure centre. 
+            Thus, my favourite sport is swimming. <br>
+
+            I also have a talent on violin. I was able to achieve an accomplishment of passing the Royal Conservatory of Music (RCM) Level 10.<br>
+            And lastly, in my free time, I spend time with my family and friends, watch movies/tv shows, and play video games.
+            </p>
+        </section>
+        <br>
+        <!--About me video section-->
+        <section class="video">
+            <video width="320" height="240" controls>
+                <source src="../Assets/video/aboutme_video.mp4" type="video/mp4">
+                Users with noncompliant browsers can't see the video.
+            </video>
+        </section>
+        <!--my footer from footer.ejs-->
+        <%- include("partial/footer") %>
+    </body>
+</html>
+

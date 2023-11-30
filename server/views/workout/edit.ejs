@@ -1,0 +1,63 @@
+<% include ../partial/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="dayTextField">Day</label>
+                    <input type="text" class="form-control"
+                    id="dayTextField"
+                    placeholder="Enter the Day of the week (Monday)"
+                    name="Day" 
+                    value="<%= Workout.Day %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeTextField">Time</label>
+                    <input type="text" class="form-control"
+                    id="timeTextField"
+                    placeholder="Enter the Time (ex. 1:23 pm)"
+                    name="Time" 
+                    value="<%= Workout.Time %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Description</label>
+                    <textarea type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Enter the Description (ex. running)"
+                    name="Description" 
+                    required>
+                    <%= Workout.Description %>
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="durationTextField">Duration</label>
+                    <input type="text" class="form-control"
+                    id="durationTextField"
+                    placeholder="Enter the Duration (ex. 45 mins)"
+                    name="Duration" 
+                    value="<%= Workout.Duration %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/workoutslist" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<% include ../partial/footer.ejs %>

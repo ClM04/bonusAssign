@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/*
+    Celine Ma (100874382)
+    My Personal Portfolio Website
+    This is the CSS Document for my website
+    CSS for desktops, laptops, or tablet that have a viewport of 960 pixels or wider
+*/
+
+/* Minimum viewport is 1100px */
+@media only screen
+and (min-width : 1100px) {
+    /*------------------------------------------Home page-------------------------------------------*/
+    /* The body tag style applies to all elements on the page */
+    body {
+        background-image: linear-gradient(to top right, rgb(0, 255, 251), rgb(216, 228, 216), black);
+        background-attachment: fixed;
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        margin:auto;
+    }
+    /* The page header for About me, Projects, and Contact pages */
+    .header h1{
+        margin-left: 45px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 120px;
+        text-shadow: 2px 5px white;
+    }
+
+    /*-----------------------------------------*/
+    /* For the homepage title */
+    .title{
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 2px 5px white;
+        color: black;
+        line-height: 100px;
+        height: 650px;
+        /* border: 15px solid black; */
+    }
+    /* For "I'm" in homepage title */
+    #title1{
+        margin-left: 90px;
+        font-size: 60px;
+        position: relative;
+        top: 200px;
+    }
+    /* For "I'm" in homepage title */
+    .title h1{
+        margin-left: 90px;
+        font-size: 220px;
+        position: relative;
+        top: 250px;
+        line-height: 0;
+    }
+    /* For "My Personal Profolio Website" in homepage title */
+    .title h3{
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        width: 300px;
+        border: 15px solid black;
+        padding: 50px;
+        margin-top: 0px;
+        margin-right: 90px;
+        float: right;
+        font-size: 60px;
+    }
+    /* For my links for other pages */
+    #banner {
+        height: 150px;
+        text-align: right;
+        display: inline;
+    }
+
+    /* Defining a style for a set of tags separated by commas applies the style to
+    all tags */
+    #banner h4,span {
+        /*h4*/
+        color: black;
+        display: inline;
+        float: left;
+        /*Span*/
+        padding: 4px;
+        border: 2px double black
+    } 
+    /* My links if not hovered */
+    a:link, a:visited {
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    /* if it is hovered */
+    a:hover {
+        color: rgb(0, 255, 251);
+    }
+    /* my footer for all four pages */
+    #footer {
+        margin-left: 45px;
+    }
+
+    /* This clear class style terminates float */
+    .clear{
+        clear: both;
+    }
+
+    /*------------------------------------------About Me page-------------------------------------------*/
+    /* About me header */
+    #aboutme-header{
+        font-size: 200px;
+    }
+    /* For "Who am I?" */
+    h2{
+        text-align: center;
+    }
+    /* For my about me paragraph */
+    .p3{
+        color: black;
+        font-size: large;
+        text-align: center;
+        border-style: dotted;
+        width: 50%;
+        border-color:black;
+        margin-left: auto;
+        margin-right: auto; 
+        padding: 20px;
+        background-color: white;
+    }
+    /* Seperate into section, for my title page, "Who am I", and my video */
+    .aboutme,.me,.video{
+        height: 100vh;/* vh = viewport height */
+        width: 100%;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    /* For "Who am I?" background */
+    .me {
+        background-color: pink;
+    }
+    /* My video background */
+    .video{
+        background-color: black;
+    }
+    /* My picture */
+    .circle,.avatar {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto; 
+        outline: solid 1px black;
+
+    }
+
+    video {
+        width: 600px;
+        height: 400px;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto; 
+        background-color:black;
+        border: 2px white solid;
+        box-shadow: 10px 10px 5px white;
+    }
+
+    /*------------------------------------------Projects page-------------------------------------------*/
+    /* My projects page title */
+    #projects-header{
+        font-size: 200px;
+    }
+    /* Seperate sections for title and table */
+    .projects,.table{
+        height: 100vh;/* vh = viewport height */
+        width: 100%;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    /* The table */
+    .projects table, th, td{
+        border: 2px black solid;
+    }
+
+    /*------------------------------------------Contact page-------------------------------------------*/
+    /* My Contacts page title */
+    #contact-header{
+        font-size: 200px;
+    }
+    /* Seperate section for contacts title and form */
+    .contacts,.form{
+        height: 100vh;/* vh = viewport height */
+        width: 100%;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    /* Form background */
+    #contact{
+        background-color: white;
+        width: 600px;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto; 
+        padding: 15px;
+    }
+    /* Contacts page background */
+    .contact{
+        background: linear-gradient(220deg, rgba(159, 61, 61, 1), rgba(0,0,0,0) 70%),
+                    linear-gradient(130deg, rgba(21, 112, 109, 1), rgba(0,0,0,0) 70%),
+                    linear-gradient(340deg, rgba(42, 104, 28, 1), rgba(0,0,0,0) 70%);
+        
+        
+        background-attachment: fixed;
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        margin:auto;
+    }
+    /* My contacts title */
+    .contact h1{
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 2px 5px black;
+        color: white;
+    }
+}
+/*------------------------------------------Partial Header/Footer-------------------------------------------*/
+/* header */
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+/* header and footer */
+a {
+    text-decoration: none;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+/* footer */
+.footer a {
+    font-size: medium;
+    color:black;
+    margin-left: 100px;
+}
+
+
